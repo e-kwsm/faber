@@ -53,6 +53,7 @@ class cc(compiler.compiler):
                 cc.try_instantiate('msvc', fs)
             cc.try_instantiate('gcc', fs)
             cc.try_instantiate('clang', fs)
+            cc.try_instantiate('icx', fs)
             if not cc.instantiated(fs):
                 msg = 'no C compiler found'
                 msg += ' matching {}.'.format(fs.essentials()) if fs else '.'

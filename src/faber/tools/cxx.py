@@ -58,6 +58,7 @@ class cxx(compiler.compiler):
                 cxx.try_instantiate('msvc', fs)
             cxx.try_instantiate('gxx', fs)
             cxx.try_instantiate('clangxx', fs)
+            cxx.try_instantiate('icpx', fs)
             if not cxx.instantiated(fs):
                 msg = 'no C++ compiler found'
                 msg += ' matching {}.'.format(fs.essentials()) if fs else '.'
